@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 
 const Header: React.FC = () => {
@@ -18,14 +17,14 @@ const Header: React.FC = () => {
                 </a>
                 <nav className="flex items-center space-x-4">
                     <ul className="hidden sm:flex space-x-4">
-                        <li className='hover:text-gray-500'><a href="#about">Sobre</a></li>
-                        <li className='hover:text-gray-500'><a href="#projects">Projetos</a></li>
-                        <li className='hover:text-gray-500'><a href="#contact">Contato</a></li>
+                        <li className='hover:text-gray-500'><a href="#About">About</a></li>
+                        <li className='hover:text-gray-500'><a href="/Projects">Projects</a></li>
+                        <li className='hover:text-gray-500'><a href="#Contact">Contact</a></li>
                     </ul>
                     <button className='block sm:hidden text-gray-200 hover:text-gray-500 focus:text-gray-200' onClick={toggleMenu}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             {isOpen ? (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                   +             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             ) : (
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
                             )}
@@ -35,9 +34,9 @@ const Header: React.FC = () => {
             </div>
             <nav className={`sm:hidden flex flex-col ${isOpen ? 'block' : 'hidden'}`}>
                 <ul className="flex flex-col space-y-2">
-                    <li className='hover:text-gray-500'><a href="#about">Sobre</a></li>
-                    <li className='hover:text-gray-500'><a href="#projects">Projetos</a></li>
-                    <li className='hover:text-gray-500'><a href="#contact">Contato</a></li>
+                    <li className='hover:text-gray-500'><a href="#About">About</a></li>
+                    <li className='hover:text-gray-500'><a href="/Projects">Projects</a></li>
+                    <li className='hover:text-gray-500'><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
         </header>

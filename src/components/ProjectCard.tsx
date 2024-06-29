@@ -18,8 +18,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, gifUrl, v
       </div>
 
       <div className="sm:w-1/2 relative">
-        <img src={gifUrl} alt="GIF" className="w-full" />
-        <div className="absolute top-0 flex justify-center w-full">
+        <img src={gifUrl} alt="GIF" className="w-11/12" />
+        <div className="absolute top-0 flex justify-center w-11/12">
           <img src={visitorBadgeUrl} alt="Badge de Visitantes" className='w-full' />
         </div>
       </div>

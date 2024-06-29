@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
 
-## Getting Started
+Um portfólio pessoal desenvolvido com Next.js e React.js, destacando meus projetos e habilidades.
 
-First, run the development server:
+## Tecnologias Utilizadas
+Liste as principais tecnologias e frameworks que você utilizou no desenvolvimento do seu portfólio.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+* Next.js
+* React.js
+* Tailwind CSS
+* Jest (para testes)
+* React Slick (para o carrossel de projetos)
+* API Visitor Badge
+
+## Estrutura de Pastas
+A estrutura de pastas do projeto é organizada da seguinte maneira
+
+```sh
+portfolio/
+│
+├── public/            
+│   ├── favicon.ico    
+│   └── ...            
+│
+├── src/
+│   ├── page.tsx
+│   │                  
+│   ├── components/    
+│   │   ├── Header.tsx       
+│   │   ├── Footer.tsx       
+│   │   ├── ProjectCard.tsx  
+│   │   └── ...              
+│   │
+│   ├── pages/              
+│   │   └── projects.tsx 
+│   │
+│   └── utils/          
+│       ├── api.ts          
+│       ├── helpers.ts      
+│       └── ...             
+│
+├── README.md          
+├── package.json       
+└── ... 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalação
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Forneça instruções detalhadas sobre como os desenvolvedores podem clonar, configurar e executar seu projeto localmente.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```sh
+git clone https://github.com/Guilhermefariah/meu-portfolio.git
+```
+```sh
+cd meu-portfolio
+```
+```sh
+npm install
+```
+```sh
+npm run dev
+```
 
-## Learn More
+## Contato
+Inclua suas informações de contato, como email ou redes sociais, para que os visitantes do seu repositório possam facilmente entrar em contato.
 
-To learn more about Next.js, take a look at the following resources:
+## Autor
+Guilherme Faria - <a>@Guilhermefariah</a>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
