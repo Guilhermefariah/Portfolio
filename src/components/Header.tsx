@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     };
 
     return (
-        <header className="bg-black text-gray-200 p-4 text-xl">
+        <header className="bg-black text-gray-200 p-4 text-2xl">
             <div className="flex justify-between items-center">
                 <a href="https://github.com/Guilhermefariah" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-gray-200" viewBox="0 0 24 24" fill="currentColor">
