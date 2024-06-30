@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, gifUrl, visitorBadgeUrl }) => {
   return (
-    <div className="shadow-md flex flex-col sm:flex-row w-full items-center relative">
+    <div className="shadow-md flex flex-col sm:flex-row w-full items-center relative mt-44 mb-64">
       <div className="w-full p-4 text-left sm:text-center sm:w-1/2">
         <h2 className="text-6xl font-bold mb-4 text-transparent bg-gradient-to-r from-black via-white to-black bg-clip-text bg-no-repeat bg-[length:80%] animate-shine">
           {title}
