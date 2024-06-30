@@ -9,15 +9,15 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, gifUrl, visitorBadgeUrl }) => {
   return (
-    <div className="shadow-md flex flex-col sm:flex-row w-full items-center relative mt-10 sm:mt-20 mb-20 sm:mb-32 transition-all duration-500 ease-in-out transform hover:scale-105">
+    <div className="shadow-md flex flex-col sm:flex-row w-full items-center relative py-44 gap-8 transition-all duration-500 ease-in-out transform hover:scale-105">
       <div className="w-full p-4 text-left sm:text-center sm:w-1/2">
-        <h2 className="text-6xl font-bold mb-4 text-transparent bg-gradient-to-r from-black via-white to-black bg-clip-text bg-no-repeat bg-[length:80%] animate-shine">
+        <h2 className="text-6xl font-bold font-serif pb-4 text-transparent bg-gradient-to-r from-black via-white to-black bg-clip-text bg-no-repeat bg-[length:80%] animate-shine">
           {title}
         </h2>
-        <p className="text-4xl text-gray-200">{description}</p>
+        <p className="text-4xl text-gray-200 font-serif">{description}</p>
       </div>
 
-      <div className="sm:w-1/2 relative overflow-hidden">
+      <div className="sm:w-1/2 relative overflow-hidden ">
         <img
           src={gifUrl}
           alt="GIF"
