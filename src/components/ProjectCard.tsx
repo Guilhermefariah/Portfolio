@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, gifUrl, v
         <h2 className="text-6xl font-bold mb-4 text-transparent bg-gradient-to-r from-black via-white to-black bg-clip-text bg-no-repeat bg-[length:80%] animate-shine">
           {title}
         </h2>
-        <p className="text-4xl text-white">{description}</p>
+        <p className="text-4xl text-gray-200">{description}</p>
       </div>
 
       <div className="sm:w-1/2 relative">
