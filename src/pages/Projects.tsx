@@ -11,14 +11,14 @@ const Projects: NextPage = () => {
     {
       id: 1,
       title: 'SmartGrid',
-      description: 'Este é um projeto de frontend para um e-commerce simples, desenvolvido em Next.js. Ele inclui componentes para exibir produtos e um carrinho de compras.',
+      description: 'This is a front-end project for an e-commerce, developed in Next.js. It includes components for displaying products and a shopping cart.',
       imageUrl: '/img/SmartGrid.jpeg',
-      githubUrl: 'https://github.com/Guilhermefariah/SmartGrid',
+      githubUrl: 'https://lista-de-compra-opal.vercel.app/',
     },
     {
       id: 2,
       title: 'Easy-Code-Roadmap',
-      description: 'Objetivo é fornecer uma plataforma interativa e educativa ou um Roadmap para iniciantes e entusiastas da programação.',
+      description: 'The aim is to provide an interactive and educational platform or roadmap for programming beginners and enthusiasts.',
       imageUrl: '/img/Easy-Code-Roadmap.png',
       githubUrl: 'https://easy-code-roadmap.vercel.app/',
     },
@@ -46,6 +46,7 @@ const Projects: NextPage = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    arrows: false,
   };
 
   const handleScroll = () => {
@@ -64,7 +65,7 @@ const Projects: NextPage = () => {
   }, []);
 
   return (
-    <div className={`pb-44 gap-8 flex flex-col min-h-screen transition-opacity duration-300 ${showProjects ? 'opacity-100' : 'opacity-0'}`}>
+    <div id='Projects' className={`flex flex-col min-h-screen transition-opacity duration-300 ${showProjects ? 'opacity-100' : 'opacity-0'}`}>
       <main className="flex-grow">
         <h1 className="text-4xl p-8 text-center cursor-pointer font-serif text-gray-200">Projects</h1>
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">

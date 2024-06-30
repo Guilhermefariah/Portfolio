@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ProfileCard = () => {
+    const [showProfile, setShowProfile] = useState(false);
+
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const elementPosition = document.getElementById('About')?.offsetTop || 0;
+        if (scrollPosition > elementPosition) {
+            setShowProfile(true);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <div className="flex flex-col items-center pb-44">
+        <div id='About' className={`flex flex-col items-center pt-0 pb-28 transition-opacity duration-300 ${showProfile ? 'opacity-100' : 'opacity-0'}`}>
             <div className="flex flex-col opacity-70 hover:opacity-100 justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-gray-200 text-black">
                 <img src="/img/Profile.jpg" alt="Profile" className="w-32 h-32 mx-auto rounded-full bg-gray-500 aspect-square" />
                 <div className="space-y-4 text-center divide-y divide-black dark:divide-gray-600">
