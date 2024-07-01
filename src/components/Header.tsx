@@ -8,7 +8,7 @@ const Header: React.FC = () => {
     };
 
     return (
-        <header className="fixed z-50 opacity-80 bg-black text-gray-200 p-4 text-2xl w-full">
+        <header className="fixed z-50 bg-opacity-70 bg-black text-gray-200 p-4 text-2xl w-full">
             <div className="flex justify-between items-center">
                 <a href="https://github.com/Guilhermefariah" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-gray-200" viewBox="0 0 24 24" fill="currentColor">
