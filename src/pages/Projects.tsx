@@ -71,15 +71,15 @@ const Projects: NextPage = () => {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Slider {...settings}>
             {projects.map((project) => (
-              <div key={project.id} className="px-2 sm:px-4">
+              <div key={project.id} className="px-2 sm:px-4 shadow-indigo-600 shadow-sm">
                 <div className="relative group ">
                   <img src={project.imageUrl} alt={project.title} className="rounded-lg shadow-lg w-full" />
                   <div className="absolute inset-0 bg-black font-serif bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
                     <div className="bg-gray-200 opacity-90 p-4 rounded-lg shadow-lg text-center max-w-xs sm:max-w-sm md:max-w-md">
-                      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">{project.title}</h2>
+                      <h2 className="text-xl sm:text-2xl md:text-3xl font-serif">{project.title}</h2>
                       <p className="text-sm sm:text-base md:text-lg text-black">{project.description}</p>
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <button className="mt-4 bg-black text-gray-200 px-4 py-2 rounded-lg shadow-md hover:bg-green-700 transition-colors duration-300">
+                        <button className="mt-4 bg-black text-gray-200 px-4 py-2 rounded-lg shadow-md hover:bg-red-600 transition-colors duration-300">
                           View on Deploy
                         </button>
                       </a>

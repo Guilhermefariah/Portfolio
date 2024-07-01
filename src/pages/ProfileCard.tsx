@@ -20,11 +20,12 @@ const ProfileCard = () => {
 
     return (
         <div id='About' className={`flex flex-col items-center pt-0 pb-28 transition-opacity duration-300 ${showProfile ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="flex flex-col opacity-70 hover:opacity-100 justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-gray-200 text-black">
-                <img src="/img/Profile.jpg" alt="Profile" className="w-32 h-32 mx-auto rounded-full bg-gray-500 aspect-square" />
-                <div className="space-y-4 text-center divide-y divide-black dark:divide-gray-600">
+            <h1 className="text-4xl p-8 text-center cursor-pointer font-serif text-gray-200">Contact</h1>
+            <div className="flex flex-col opacity-70 hover:opacity-100 justify-center max-w-xs p-6 rounded-lg sm:px-12 bg-gray-200 border-l-indigo-600 shadow-indigo-600 shadow-sm text-black">
+                <img src="/img/Profile.jpg" alt="Profile" className="w-32 h-32 mx-auto rounded-full bg-gray-200 aspect-square" />
+                <div className="space-y-4 text-center divide-y divide-indigo-600 dark:divide-gray-200">
                     <div className="my-2 space-y-1">
-                        <h2 className="text-3xl font-semibold sm:text-2xl">Guilherme Faria</h2>
+                        <h2 className="text-3xl font-serif sm:text-2xl">Guilherme Faria</h2>
                         <p className="px-5 text-2xl sm:text-base text-black">Software Developer</p>
                     </div>
                     <div className="flex justify-center pt-2 space-x-4 align-center">
