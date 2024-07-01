@@ -17,12 +17,12 @@ const Header: React.FC = () => {
                 </a>
                 <nav className="flex items-center space-x-4 font-serif">
                     <ul className="hidden sm:flex space-x-4">
-                        <li className='hover:text-gray-500'><a href="#About">About</a></li>
-                        <li className='hover:text-gray-500'><a href="#Certificates">Certificates</a></li>
-                        <li className='hover:text-gray-500'><a href="#Projects">Projects</a></li>
-                        <li className='hover:text-gray-500'><a href="#Contact">Contact</a></li>
+                        <li className="hover:text-gray-500"><a href="#About">About</a></li>
+                        <li className="hover:text-gray-500"><a href="#Certificates">Certificates</a></li>
+                        <li className="hover:text-gray-500"><a href="#Projects">Projects</a></li>
+                        <li className="hover:text-gray-500"><a href="#Contact">Contact</a></li>
                     </ul>
-                    <button className='block sm:hidden text-gray-200 hover:text-gray-500 focus:text-gray-200' onClick={toggleMenu}>
+                    <button className="block sm:hidden text-gray-200 hover:text-gray-500 focus:text-gray-200" onClick={toggleMenu}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             {isOpen ? (
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -35,13 +35,14 @@ const Header: React.FC = () => {
             </div>
             <nav className={`sm:hidden flex flex-col ${isOpen ? 'block' : 'hidden'}`}>
                 <ul className="flex flex-col space-y-2">
-                    <li className='hover:text-gray-500'><a href="#About">About</a></li>
-                    <li className='hover:text-gray-500'><a href="#Certificates">Certificates</a></li>
-                    <li className='hover:text-gray-500'><a href="#Projects">Projects</a></li>
-                    <li className='hover:text-gray-500'><a href="#Contact">Contact</a></li>
+                    <li className="hover:text-gray-500"><a href="#About">About</a></li>
+                    <li className="hover:text-gray-500"><a href="#Certificates">Certificates</a></li>
+                    <li className="hover:text-gray-500"><a href="#Projects">Projects</a></li>
+                    <li className="hover:text-gray-500"><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
     );
 };
+
 export default Header;
