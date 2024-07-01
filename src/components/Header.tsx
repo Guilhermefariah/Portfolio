@@ -16,10 +16,10 @@ const Header: React.FC = () => {
                     </svg>
                 </a>
                 <nav className="hidden sm:flex items-center space-x-4">
-                    <a href="#About" className="hover:text-gray-500 hover:underline hover:font-bold">About</a>
-                    <a href="#Certificates" className="hover:text-gray-500 hover:underline hover:font-bold">Certificates</a>
-                    <a href="#Projects" className="hover:text-gray-500 hover:underline hover:font-bold">Projects</a>
-                    <a href="#Contact" className="hover:text-gray-500 hover:underline hover:font-bold">Contact</a>
+                    <a href="#About" className="hover:text-gray-500 hover:underline hover:animate-pulse">About</a>
+                    <a href="#Certificates" className="hover:text-gray-500 hover:underline hover:animate-pulse">Certificates</a>
+                    <a href="#Projects" className="hover:text-gray-500 hover:underline hover:animate-pulse">Projects</a>
+                    <a href="#Contact" className="hover:text-gray-500 hover:underline hover:animate-pulse">Contact</a>
                 </nav>
                 <button className="sm:hidden text-gray-200 hover:text-gray-500 focus:text-gray-200" onClick={toggleMenu}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
