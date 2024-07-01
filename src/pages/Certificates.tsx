@@ -1,7 +1,4 @@
 import React from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 interface Certificate {
     title: string;
@@ -92,47 +89,12 @@ const Certificates: React.FC = () => {
         },
     ];
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
     return (
         <div id="Certificates" className="flex flex-col min-h-screen transition-opacity duration-300">
             <main className="flex-grow">
                 <h1 className="text-4xl p-8 text-center cursor-pointer font-serif text-gray-200">Certificates</h1>
                 <div className="max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-                    <Slider {...settings}>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                         {certificates.map((certificate, index) => (
                             <div key={index} className="p-4">
                                 <div className="bg-gray-800 rounded-lg border-l-indigo-600 shadow-indigo-600 shadow-sm overflow-hidden w-full h-full flex flex-col items-center">
@@ -145,10 +107,11 @@ const Certificates: React.FC = () => {
                                 </div>
                             </div>
                         ))}
-                    </Slider>
+                    </div>
                 </div>
             </main>
         </div>
+
     );
 };
 
