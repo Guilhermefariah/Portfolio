@@ -8,7 +8,7 @@ const Header: React.FC = () => {
     };
 
     return (
-        <header className="bg-black text-gray-200 p-4 text-2xl">
+        <header className="fixed z-50 opacity-80 bg-black text-gray-200 p-4 text-2xl w-full">
             <div className="flex justify-between items-center">
                 <a href="https://github.com/Guilhermefariah" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-gray-200" viewBox="0 0 24 24" fill="currentColor">
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
                     <button className='block sm:hidden text-gray-200 hover:text-gray-500 focus:text-gray-200' onClick={toggleMenu}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             {isOpen ? (
-                   +             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             ) : (
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
                             )}
