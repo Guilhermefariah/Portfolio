@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { NextPage } from 'next';
 
 const Projects: NextPage = () => {
-  const [showProjects, setShowProjects] = useState(false);
-
   const projects = [
     {
       id: 1,
@@ -35,23 +33,8 @@ const Projects: NextPage = () => {
     },
   ];
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY + window.innerHeight;
-    const elementPosition = document.getElementById('projects')?.offsetTop || 0;
-    if (scrollPosition > elementPosition) {
-      setShowProjects(true);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
-    <div id="Projects" className={`flex flex-col min-h-screen transition-opacity duration-300 ${showProjects ? 'opacity-100' : 'opacity-0'}`}>
+    <div id="Projects" className="flex flex-col min-h-screen transition-opacity duration-300">
       <main className="flex-grow">
         <h1 className="text-4xl p-8 text-center cursor-pointer font-serif text-gray-200">Projects</h1>
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
