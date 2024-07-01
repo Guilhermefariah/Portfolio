@@ -97,7 +97,7 @@ const Certificates: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                         {certificates.map((certificate, index) => (
                             <div key={index} className="p-4">
-                                <div className="bg-gray-800 rounded-lg border-l-indigo-600 shadow-indigo-600 shadow-sm overflow-hidden w-full h-full flex flex-col items-center">
+                                <div className="bg-black p-1 border-2 rounded-lg shadow-gray-800 shadow-lg overflow-hidden w-full h-full flex flex-col items-center">
                                     <img src={certificate.imageUrl} alt={certificate.title} className="w-full h-48 object-cover" />
                                     <div className="p-4 flex flex-col items-center text-center">
                                         <h2 className="text-xl font-semibold text-gray-200">{certificate.title}</h2>

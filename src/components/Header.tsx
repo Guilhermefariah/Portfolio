@@ -16,10 +16,10 @@ const Header: React.FC = () => {
                     </svg>
                 </a>
                 <nav className="hidden sm:flex items-center space-x-4">
-                    <a href="#About" className="hover:text-gray-500">About</a>
-                    <a href="#Certificates" className="hover:text-gray-500">Certificates</a>
-                    <a href="#Projects" className="hover:text-gray-500">Projects</a>
-                    <a href="#Contact" className="hover:text-gray-500">Contact</a>
+                    <a href="#About" className="hover:text-gray-500 hover:underline hover:font-bold">About</a>
+                    <a href="#Certificates" className="hover:text-gray-500 hover:underline hover:font-bold">Certificates</a>
+                    <a href="#Projects" className="hover:text-gray-500 hover:underline hover:font-bold">Projects</a>
+                    <a href="#Contact" className="hover:text-gray-500 hover:underline hover:font-bold">Contact</a>
                 </nav>
                 <button className="sm:hidden text-gray-200 hover:text-gray-500 focus:text-gray-200" onClick={toggleMenu}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -33,10 +33,10 @@ const Header: React.FC = () => {
             </div>
             <nav className={`sm:hidden ${isOpen ? 'block' : 'hidden'}`}>
                 <ul className="flex flex-col space-y-2">
-                    <li className="hover:text-gray-500"><a href="#About">About</a></li>
-                    <li className="hover:text-gray-500"><a href="#Certificates">Certificates</a></li>
-                    <li className="hover:text-gray-500"><a href="#Projects">Projects</a></li>
-                    <li className="hover:text-gray-500"><a href="#Contact">Contact</a></li>
+                    <li className="font-serif"><a href="#About">About</a></li>
+                    <li className="font-serif"><a href="#Certificates">Certificates</a></li>
+                    <li className="font-serif"><a href="#Projects">Projects</a></li>
+                    <li className="font-serif"><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
         </header>

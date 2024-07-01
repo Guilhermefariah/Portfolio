@@ -36,11 +36,11 @@ const Projects: NextPage = () => {
   return (
     <div id="Projects" className="flex flex-col min-h-screen transition-opacity duration-300">
       <main className="flex-grow">
-        <h1 className="text-4xl p-8 text-center cursor-pointer font-serif text-gray-200">Projects</h1>
+        <h1 className="text-4xl py-28 text-center cursor-pointer font-serif text-gray-200">Projects</h1>
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {projects.map((project) => (
-              <div key={project.id} className="px-2 sm:px-4 shadow-indigo-600 shadow-sm">
+              <div key={project.id} className="bg-black p-1 border-2 rounded-lg shadow-gray-800 shadow-lg">
                 <div className="relative group">
                   <img src={project.imageUrl} alt={project.title} className="rounded-lg shadow-lg w-full" />
                   <div className="absolute inset-0 bg-black font-serif bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
