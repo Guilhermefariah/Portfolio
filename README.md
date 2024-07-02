@@ -31,7 +31,9 @@ portfolio/
 │   │   ├── ProjectCard.tsx  
 │   │   └── ...              
 │   │
-│   ├── pages/              
+│   ├── pages/ 
+│   │   ├── Certificates.tsx  
+│   │   ├── ProfileCard.tsx               
 │   │   └── projects.tsx 
 │   │
 │   └── utils/          

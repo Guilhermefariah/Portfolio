@@ -1,6 +1,8 @@
 'use client';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import React, { useState, useEffect } from 'react';
+import { FaArrowUp } from 'react-icons/fa';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProjectCard from '@/components/ProjectCard';
@@ -9,6 +11,27 @@ import ProfileCard from '@/pages/ProfileCard';
 import Certificates from '@/pages/Certificates';
 
 const Home: NextPage = () => {
+  const [showButton, setShowButton] = useState(false); 
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' 
+    });
+  };
+
+  const handleScroll = () => {
+    if (window.scrollY > 200) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll); 
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -34,6 +57,15 @@ const Home: NextPage = () => {
         <ProfileCard />
       </div>
       <Footer />
+
+      {showButton && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-4 right-6 bg-gray-200 hover:bg-gray-800 text-black hover:text-gray-200 font-bold p-4 rounded-full flex items-center justify-center"
+        >
+          <FaArrowUp className="animate-bounce" />
+        </button>
+      )}
     </div>
   );
 };
