@@ -61,7 +61,7 @@ const Home: NextPage = () => {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-6 bg-gray-200 hover:bg-gray-800 text-black hover:text-gray-200 font-bold p-4 rounded-full flex items-center justify-center"
+          className="fixed bottom-8 right-8 bg-gray-200 hover:bg-gray-800 text-black hover:text-gray-200 font-bold p-4 rounded-full flex items-center justify-center"
         >
           <FaArrowUp className="animate-bounce" />
         </button>
