@@ -12,7 +12,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description }) => {
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif pb-4 text-transparent bg-gradient-to-r from-black via-white to-black bg-clip-text bg-no-repeat bg-[length:80%] animate-shine">
           {title}
         </h2>
-        <p className="text-xl sm:text-2xl lg:text-3xl text-gray-200 font-serif">{description}</p>
+        <p className="text-xl sm:text-2xl lg:text-3xl text-gray-400 font-serif">{description}</p>
       </div>
     </div>
   );
