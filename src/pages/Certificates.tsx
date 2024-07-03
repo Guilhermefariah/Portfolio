@@ -92,7 +92,7 @@ const Certificates: React.FC = () => {
   ];
 
   return (
-    <div id="Certificates" className="flex flex-col items-center justify-center min-h-screen mt-12 rounded-lg bg-gray-800 hover:bg-opacity-70">
+    <div id="Certificates" className="flex flex-col items-center justify-center min-h-screen mt-12 rounded-lg bg-gray-900 hover:bg-opacity-70">
     <main className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <h1 className="text-4xl pt-24 pb-8 text-center font-serif text-gray-400 underline hover:animate-pulse">Certificates</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -103,7 +103,7 @@ const Certificates: React.FC = () => {
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <div className="bg-black p-1 border-2 rounded-lg shadow-gray-800 shadow-lg overflow-hidden flex flex-col items-center">
+            <div className="bg-black p-1 border-2 rounded-lg shadow-gray-900 shadow-lg overflow-hidden flex flex-col items-center">
               <img src={certificate.imageUrl} alt={certificate.title} className="w-full h-48 object-cover" />
               <div className="p-4 flex flex-col items-center text-center">
                 <h2 className="text-xl font-semibold text-gray-200">{certificate.title}</h2>

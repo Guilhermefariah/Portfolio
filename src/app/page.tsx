@@ -66,7 +66,7 @@ const Home: NextPage = () => {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-gray-200 hover:bg-gray-800 text-black hover:text-gray-200 font-bold p-4 rounded-full flex items-center justify-center"
+          className="fixed bottom-8 right-8 bg-gray-200 hover:bg-gray-900 text-black hover:text-gray-200 font-bold p-4 rounded-full flex items-center justify-center"
         >
           <FaArrowUp className="animate-bounce" />
         </button>
@@ -74,7 +74,7 @@ const Home: NextPage = () => {
 
 <button
   onClick={toggleBackgroundColor}
-  className="fixed bottom-8 left-8 bg-gray-200 hover:bg-gray-800 text-black hover:text-gray-200 font-bold p-4 rounded-full flex items-center justify-center"
+  className="fixed bottom-8 left-8 bg-gray-200 hover:bg-gray-900 text-black hover:text-gray-200 font-bold p-4 rounded-full flex items-center justify-center"
 >
   {bgColor === 'black' ? <FaToggleOn /> : <FaToggleOff />}
 </button>
