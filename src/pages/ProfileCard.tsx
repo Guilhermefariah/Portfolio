@@ -3,7 +3,7 @@ import React from 'react';
 const ProfileCard = () => {
     return (
         <div id="About" className="flex flex-col items-center py-28">
-            <h1 className="text-4xl py-12 text-center cursor-pointer font-serif text-text-gray-600 underline text-gray-400 hover:animate-pulse">Contact</h1>
+            <h1 className="text-4xl py-12 text-center font-serif text-text-gray-600 underline text-gray-400 hover:animate-pulse">Contact</h1>
             <div className="flex flex-col opacity-70 hover:opacity-100 justify-center max-w-xs sm:px-12 bg-gray-300 p-2 border-2 rounded-lg shadow-lg text-black mt-4">
                 <img src="/img/Profile.jpg" alt="Guilherme Faria's profile" className="w-32 h-32 mx-auto rounded-full bg-gray-200" />
                 <div className="space-y-4 text-center divide-y divide-black dark:divide-gray-200 mt-4">
