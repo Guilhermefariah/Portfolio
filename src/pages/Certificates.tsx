@@ -95,11 +95,11 @@ const Certificates: React.FC = () => {
     <div id="Certificates" className="flex flex-col items-center justify-center min-h-screen mt-12 rounded-lg bg-gray-800 hover:bg-opacity-70">
     <main className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <h1 className="text-4xl pt-24 pb-8 text-center font-serif text-gray-400 underline hover:animate-pulse">Certificates</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {certificates.map((certificate, index) => (
           <div
             key={index}
-            className={`p-4 ${hoveredIndex !== null && hoveredIndex !== index ? 'opacity-50' : 'opacity-100'}`}
+            className={`p-8 ${hoveredIndex !== null && hoveredIndex !== index ? 'opacity-50' : 'opacity-100'}`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
