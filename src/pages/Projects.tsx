@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { NextPage } from 'next';
 
 const Projects: NextPage = () => {
@@ -42,7 +43,7 @@ const Projects: NextPage = () => {
             {projects.map((project) => (
               <div key={project.id} className="bg-black p-1 border-2 rounded-lg shadow-gray-900 shadow-lg">
                 <div className="relative group">
-                  <img src={project.imageUrl} alt={project.title} className="rounded-lg shadow-lg w-full" />
+                  <Image src={project.imageUrl} alt={project.title} width={400} height={300} className="rounded-lg" />
                   <div className="absolute inset-0 bg-black font-serif bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
                     <div className="bg-gray-200 opacity-90 p-2 rounded-lg shadow-lg text-center max-w-xs sm:max-w-sm md:max-w-md">
                       <h2 className="text-xl sm:text-2xl md:text-3xl font-serif">{project.title}</h2>
