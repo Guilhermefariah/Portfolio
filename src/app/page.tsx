@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div id="About" className={`flex-auto w-full flex justify-center items-center bg-${bgColor}`}>
+      <div id="About" className={`flex-auto w-full justify-center items-center bg-${bgColor}`}>
         <ProjectCard
           title="Guilherme Faria"
           description="Software Developer"
@@ -55,14 +55,15 @@ const Home: NextPage = () => {
       <div id="Projects" className={`flex-1 flex justify-center items-center bg-${bgColor}`}>
         <Projects />
       </div>
+
       <div id="Certificates" className={`flex-1 flex justify-center items-center bg-${bgColor}`}>
         <Certificates />
       </div>
+
       <div id="Contact" className={`flex-1 flex justify-center items-center bg-${bgColor}`}>
         <ProfileCard />
       </div>
       <Footer />
-
       {showButton && (
         <button
           onClick={scrollToTop}
@@ -71,13 +72,12 @@ const Home: NextPage = () => {
           <FaArrowUp className="animate-bounce" />
         </button>
       )}
-
-<button
-  onClick={toggleBackgroundColor}
-  className="fixed bottom-8 left-8 bg-gray-200 hover:bg-gray-900 text-black hover:text-gray-200 font-bold p-4 rounded-full flex items-center justify-center"
->
-  {bgColor === 'black' ? <FaToggleOn /> : <FaToggleOff />}
-</button>
+      <button
+        onClick={toggleBackgroundColor}
+        className="fixed bottom-8 left-8 bg-gray-200 hover:bg-gray-900 text-black hover:text-gray-200 font-bold p-4 rounded-full flex items-center justify-center"
+      >
+        {bgColor === 'black' ? <FaToggleOn /> : <FaToggleOff />}
+      </button>
     </div>
   );
 };

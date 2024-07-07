@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 interface Certificate {
   title: string;
@@ -10,7 +11,7 @@ interface Certificate {
 const Certificates: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const certificates: Certificate[] = [
-    
+
     {
       title: 'Google',
       description: 'Design UX',
@@ -93,29 +94,29 @@ const Certificates: React.FC = () => {
 
   return (
     <div id="Certificates" className="flex flex-col items-center justify-center min-h-screen mt-12 rounded-lg bg-gray-900 hover:bg-opacity-70">
-    <main className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl pt-24 pb-8 text-center font-serif text-gray-400 underline hover:animate-pulse">Certificates</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {certificates.map((certificate, index) => (
-          <div
-            key={index}
-            className={`p-8 ${hoveredIndex !== null && hoveredIndex !== index ? 'opacity-50' : 'opacity-100'}`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            <div className="bg-black p-1 border-2 rounded-lg shadow-gray-900 shadow-lg overflow-hidden flex flex-col items-center">
-              <img src={certificate.imageUrl} alt={certificate.title} className="w-full h-48 object-cover" />
-              <div className="p-4 flex flex-col items-center text-center">
-                <h2 className="text-xl font-semibold text-gray-200">{certificate.title}</h2>
-                <p className="mt-2 text-gray-200">{certificate.description}</p>
-                <a href={certificate.link} target="_blank" rel="noopener noreferrer" className="text-indigo-600 text-2xl p-2 inline-block hover:animate-pulse">View Certificate</a>
+      <main className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+        <h1 className="text-4xl pt-24 pb-8 text-center font-serif text-gray-400 underline hover:animate-pulse">Certificates</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {certificates.map((certificate, index) => (
+            <div
+              key={index}
+              className={`p-8 ${hoveredIndex !== null && hoveredIndex !== index ? 'opacity-50' : 'opacity-100'}`}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className="bg-black p-1 border-2 rounded-lg shadow-gray-900 shadow-lg overflow-hidden flex flex-col items-center">
+                <Image src={certificate.imageUrl} alt={certificate.title} width={400} height={200} />
+                <div className="p-4 flex flex-col items-center text-center">
+                  <h2 className="text-xl font-semibold text-gray-200">{certificate.title}</h2>
+                  <p className="mt-2 text-gray-200">{certificate.description}</p>
+                  <a href={certificate.link} target="_blank" rel="noopener noreferrer" className="text-indigo-600 text-2xl p-2 inline-block hover:animate-pulse">View Certificate</a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </main>
-  </div>
+          ))}
+        </div>
+      </main>
+    </div>
   );
 };
 
