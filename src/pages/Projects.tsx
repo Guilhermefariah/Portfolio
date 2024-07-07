@@ -21,14 +21,14 @@ const Projects: NextPage = () => {
     {
       id: 3,
       title: 'GuiDeveloper',
-      description: 'Bem-vindo ao repositório da minha página de desenvolvedor no GitHub! Este projeto é uma vitrine dos meus trabalhos e projetos. Aqui você pode explorar minhas habilidades e projetos em HTML, CSS, e JavaScript.',
+      description: 'Welcome to my developer page repository on GitHub! This project is a showcase of my work and projects. Here you can explore my skills and projects in HTML, CSS and JavaScript.',
       imageUrl: '/img/Guilhermefariah.png',
       githubUrl: 'https://guilhermefariah-github-io.vercel.app/',
     },
     {
       id: 4,
       title: 'FaceForm',
-      description: 'Um projeto com um formulário desenvolvido usando Next.js, React e TypeScript, com ESLint para garantir código limpo e Tailwind CSS para estilização fácil. Essas ferramentas proporcionam uma experiência de desenvolvimento robusta e eficiente.',
+      description: 'A project with a form developed in Next.js, React and TypeScript, with ESLint to ensure clean code and Tailwind CSS for easy styling. These tools provide a robust and efficient development experience.',
       imageUrl: '/img/FaceForm.png',
       githubUrl: 'https://guilhermefariah-github-io.vercel.app/',
     },

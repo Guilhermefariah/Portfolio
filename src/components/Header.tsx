@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FiInfo, FiAward, FiBox, FiMail } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,10 +18,10 @@ const Header: React.FC = () => {
                     </svg>
                 </a>
                 <nav className="hidden sm:flex items-center space-x-4">
-                    <a href="#About" className="hover:text-gray-500 hover:underline hover:animate-pulse"><FiInfo className="inline-block h-6 w-6" /> About</a>
-                    <a href="#Projects" className="hover:text-gray-500 hover:underline hover:animate-pulse"><FiBox className="inline-block h-6 w-6" /> Projects</a>
-                    <a href="#Certificates" className="hover:text-gray-500 hover:underline hover:animate-pulse"><FiAward className="inline-block h-6 w-6" /> Certificates</a>
-                    <a href="#Contact" className="hover:text-gray-500 hover:underline hover:animate-pulse"><FiMail className="inline-block h-6 w-6" /> Contact</a>
+                    <NavItem href="#About"><FiInfo className="inline-block h-6 w-6" /> About</NavItem>
+                    <NavItem href="#Projects"><FiBox className="inline-block h-6 w-6" /> Projects</NavItem>
+                    <NavItem href="#Certificates"><FiAward className="inline-block h-6 w-6" /> Certificates</NavItem>
+                    <NavItem href="#Contact"><FiMail className="inline-block h-6 w-6" /> Contact</NavItem>
                 </nav>
                 <button className="sm:hidden text-gray-200 hover:text-gray-500 focus:text-gray-200" onClick={toggleMenu}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -32,16 +33,39 @@ const Header: React.FC = () => {
                     </svg>
                 </button>
             </div>
-            <nav className={`sm:hidden ${isOpen ? 'block' : 'hidden'}`}>
-                <ul className="flex flex-col space-y-2">
-                    <li className="font-serif"><a href="#About"><FiInfo className="inline-block h-6 w-6" /> About</a></li>
-                    <li className="font-serif"><a href="#Projects"><FiBox className="inline-block h-6 w-6" /> Projects</a></li>
-                    <li className="font-serif"><a href="#Certificates"><FiAward className="inline-block h-6 w-6" /> Certificates</a></li>
-                    <li className="font-serif"><a href="#Contact"><FiMail className="inline-block h-6 w-6" /> Contact</a></li>
-                </ul>
-            </nav>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.nav
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                        className="sm:hidden"
+                    >
+                        <ul className="flex flex-col space-y-2">
+                            <NavItem href="#About"><FiInfo className="inline-block h-6 w-6" /> About</NavItem>
+                            <NavItem href="#Projects"><FiBox className="inline-block h-6 w-6" /> Projects</NavItem>
+                            <NavItem href="#Certificates"><FiAward className="inline-block h-6 w-6" /> Certificates</NavItem>
+                            <NavItem href="#Contact"><FiMail className="inline-block h-6 w-6" /> Contact</NavItem>
+                        </ul>
+                    </motion.nav>
+                )}
+            </AnimatePresence>
         </header>
     );
 };
+
+interface NavItemProps {
+    href: string;
+    children: React.ReactNode;
+}
+
+const NavItem: React.FC<NavItemProps> = ({ href, children }) => (
+    <li className="font-serif">
+        <a href={href} className="inline-block text-gray-200 hover:text-gray-500 hover:underline hover:animate-pulse">
+            {children}
+        </a>
+    </li>
+);
 
 export default Header;
