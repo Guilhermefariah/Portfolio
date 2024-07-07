@@ -6,27 +6,34 @@ const Projects: NextPage = () => {
   const projects = [
     {
       id: 1,
+      title: 'Landing-page',
+      description: 'This project is an interactive and animated landing page built with Next.js, TypeScript, React and Tailwind CSS. It includes various components and features to provide a pleasant experience to users.',
+      imageUrl: '/img/Landing-page.jpeg',
+      githubUrl: 'https://freela-comercio.vercel.app/',
+    },
+    {
+      id: 2,
       title: 'SmartGrid',
       description: 'This is a front-end project for an e-commerce, developed in Next.js. It includes components for displaying products and a shopping cart.',
       imageUrl: '/img/SmartGrid.jpeg',
       githubUrl: 'https://lista-de-compra-opal.vercel.app/',
     },
     {
-      id: 2,
+      id: 3,
       title: 'Easy-Code-Roadmap',
       description: 'The aim is to provide an interactive and educational platform or roadmap for programming beginners and enthusiasts.',
       imageUrl: '/img/Easy-Code-Roadmap.png',
       githubUrl: 'https://easy-code-roadmap.vercel.app/',
     },
     {
-      id: 3,
+      id: 4,
       title: 'GuiDeveloper',
       description: 'Welcome to my developer page repository on GitHub! This project is a showcase of my work and projects. Here you can explore my skills and projects in HTML, CSS and JavaScript.',
       imageUrl: '/img/Guilhermefariah.png',
       githubUrl: 'https://guilhermefariah-github-io.vercel.app/',
     },
     {
-      id: 4,
+      id: 5,
       title: 'FaceForm',
       description: 'A project with a form developed in Next.js, React and TypeScript, with ESLint to ensure clean code and Tailwind CSS for easy styling. These tools provide a robust and efficient development experience.',
       imageUrl: '/img/FaceForm.png',
