@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion'; 
 
 interface Certificate {
   title: string;
@@ -98,21 +99,30 @@ const Certificates: React.FC = () => {
         <h1 className="text-4xl pt-24 pb-8 text-center font-serif text-gray-400 underline hover:animate-pulse">Certificates</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {certificates.map((certificate, index) => (
-            <div
+            <motion.div 
               key={index}
               className={`p-8 ${hoveredIndex !== null && hoveredIndex !== index ? 'opacity-50' : 'opacity-100'}`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }} 
+              transition={{ duration: 0.2, ease: 'easeInOut' }}
             >
               <div className="bg-black p-1 border-2 rounded-lg shadow-gray-900 shadow-lg overflow-hidden flex flex-col items-center">
-                <Image src={certificate.imageUrl} alt={certificate.title} width={400} height={200} />
+                <motion.div 
+                  initial={{ opacity: 0 }} 
+                  animate={{ opacity: 1 }} 
+                  transition={{ duration: 0.3 }} 
+                >
+                  <Image src={certificate.imageUrl} alt={certificate.title} width={400} height={200} />
+                </motion.div>
                 <div className="p-4 flex flex-col items-center text-center">
                   <h2 className="text-xl font-semibold text-gray-200">{certificate.title}</h2>
                   <p className="mt-2 text-gray-200">{certificate.description}</p>
                   <a href={certificate.link} target="_blank" rel="noopener noreferrer" className="text-indigo-600 text-2xl p-2 inline-block hover:animate-pulse">View Certificate</a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </main>
