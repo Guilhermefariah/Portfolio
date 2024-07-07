@@ -95,6 +95,13 @@ const Certificates: React.FC = () => {
       link: 'https://drive.google.com/file/d/1J9iQQdv4DBmad4PGftpKJ7k5Mb7-k9Gh/view',
     },
     {
+      title: 'Fundação Bradesco',
+      description: 'Database',
+      category: 'Databases',
+      imageUrl: '/img/Fundacao_Bradesco_Database.jpg',
+      link: 'https://drive.google.com/file/d/1EFL2Q9WGWKFd2pYKwlly4ms6OztlzyJo/view',
+    },
+    {
       title: 'Santander AWS',
       description: 'Preparatory AWS',
       category: 'Cloud Computing',
@@ -129,7 +136,7 @@ const Certificates: React.FC = () => {
     <div id="Certificates" className="flex flex-col items-center justify-center min-h-screen mt-12 rounded-lg bg-gray-900 hover:bg-opacity-70">
       <main className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl pt-24 pb-8 text-center font-serif text-gray-200 underline hover:animate-pulse">Certificates</h1>
-        <div className="flex justify-center flex-wrap mb-8">
+        <div className="flex justify-center flex-wrap mb-8 space-x-2 space-y-2">
           <button
             onClick={() => categorySelect(null)}
             className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === null ? 'bg-indigo-600' : 'bg-gray-800 hover:bg-indigo-600'}`}
@@ -230,7 +237,7 @@ const Certificates: React.FC = () => {
                 <h2 className="text-2xl font-semibold text-gray-200 mt-4">{selectedCertificate.title}</h2>
                 <p className="text-gray-200">{selectedCertificate.description}</p>
                 <a href={selectedCertificate.link} target="_blank" rel="noopener noreferrer" className="text-indigo-600 text-lg mt-2 inline-block hover:animate-pulse">View Certificate</a>
-                <button onClick={closeModal} className="text-gray-400 hover:text-gray-200 mt-4">Close</button>
+                <button onClick={closeModal} className="grid text-gray-400 hover:text-red-600 mt-4 place-items-end">Close</button>
               </motion.div>
             </motion.div>
           )}
