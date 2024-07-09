@@ -1,4 +1,3 @@
-// pages/index.tsx (ou Home.tsx)
 'use client';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -10,12 +9,11 @@ import ProjectCard from '@/components/ProjectCard';
 import Projects from '@/pages/Projects';
 import ProfileCard from '@/pages/ProfileCard';
 import Certificates from '@/pages/Certificates';
-import ContactModal from '@/components/ContactModal'; 
+
 
 const Home: NextPage = () => {
   const [showButton, setShowButton] = useState(false);
   const [bgColor, setBgColor] = useState<'black' | 'white'>('black');
-  const [showContactModal, setShowContactModal] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -39,10 +37,6 @@ const Home: NextPage = () => {
 
   const toggleBackgroundColor = () => {
     setBgColor(bgColor === 'black' ? 'white' : 'black');
-  };
-
-  const contactModal = () => {
-    setShowContactModal(!showContactModal);
   };
 
   return (
@@ -84,15 +78,6 @@ const Home: NextPage = () => {
         className="fixed bottom-8 left-8 bg-gray-200 hover:bg-gray-600 text-black hover:text-gray-200 font-bold p-4 rounded-full flex items-center justify-center"
       >
         {bgColor === 'black' ? <FaToggleOn /> : <FaToggleOff />}
-      </button>
-      {showContactModal && (
-        <ContactModal onClose={contactModal} />
-      )}
-      <button
-        onClick={contactModal}
-        className="fixed bottom-8 right-24 bg-blue-700 hover:bg-green-600 text-gray-200 font-bold p-3 rounded-lg flex items-center justify-center"
-      >
-        Contact
       </button>
     </div>
   );
