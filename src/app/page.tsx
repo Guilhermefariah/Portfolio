@@ -41,7 +41,7 @@ const Home: NextPage = () => {
     setBgColor(bgColor === 'black' ? 'white' : 'black');
   };
 
-  const toggleContactModal = () => {
+  const contactModal = () => {
     setShowContactModal(!showContactModal);
   };
 
@@ -86,10 +86,10 @@ const Home: NextPage = () => {
         {bgColor === 'black' ? <FaToggleOn /> : <FaToggleOff />}
       </button>
       {showContactModal && (
-        <ContactModal onClose={toggleContactModal} />
+        <ContactModal onClose={contactModal} />
       )}
       <button
-        onClick={toggleContactModal}
+        onClick={contactModal}
         className="fixed bottom-8 right-24 bg-blue-700 hover:bg-green-600 text-gray-200 font-bold p-3 rounded-lg flex items-center justify-center"
       >
         Contact
