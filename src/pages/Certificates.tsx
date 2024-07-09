@@ -237,7 +237,7 @@ const Certificates: React.FC = () => {
                 <h2 className="text-2xl font-semibold text-gray-200 mt-4">{selectedCertificate.title}</h2>
                 <p className="text-gray-200">{selectedCertificate.description}</p>
                 <a href={selectedCertificate.link} target="_blank" rel="noopener noreferrer" className="text-indigo-600 text-lg mt-2 inline-block hover:animate-pulse">View Certificate</a>
-                <button onClick={closeModal} className="grid text-gray-400 hover:text-red-600 mt-4 place-items-end">Close</button>
+                <button onClick={closeModal} className="grid text-gray-100 hover:text-gray-600 mt-4 place-items-end rounded-lg px-2 bg-red-600">Close</button>
               </motion.div>
             </motion.div>
           )}
