@@ -242,6 +242,9 @@ const Certificates: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence>
+        <div className="text-center m-8 font-bold text-xl font-serif text-gray-200">
+          Total Certificates: {certificates.length}
+        </div>
       </main>
     </div>
   );
