@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <p>&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
-      <div className="flex space-x-4">
+      <>
         <a href="https://www.linkedin.com/in/-guilherme-faria/" target="_blank" rel="noopener noreferrer"><FaLinkedin className="text-gray-200 hover:text-indigo-600 transition duration-300" /></a>
         <a href="https://github.com/Guilhermefariah" target="_blank" rel="noopener noreferrer"><FaGithub className="text-gray-200 hover:text-indigo-600 transition duration-300" /></a>
-      </div>
+      </>
     </motion.footer>
   );
 };

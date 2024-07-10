@@ -39,6 +39,13 @@ const Projects: NextPage = () => {
       imageUrl: '/img/FaceForm.png',
       githubUrl: 'https://guilhermefariah-github-io.vercel.app/',
     },
+    {
+      id: 6,
+      title: 'Shopping',
+      description: 'This project is a simple shopping cart application developed using HTML, CSS, and JavaScript. The application allows users to add products to their cart, view the cart, and proceed to checkout.',
+      imageUrl: '/img/ScreenShopping.jpeg',
+      githubUrl: 'https://shopping-tan-nine.vercel.app/',
+    },
   ];
 
   return (
