@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FiInfo, FiAward, FiBox, FiMail } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaGithub } from 'react-icons/fa';
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,11 +12,14 @@ const Header: React.FC = () => {
 
     return (
         <header className="fixed z-50 bg-opacity-70 bg-black text-gray-200 p-4 text-2xl w-full">
-            <div className="flex justify-between items-center">
+            <motion.div
+                className="flex justify-between items-center"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
                 <a href="https://github.com/Guilhermefariah" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-gray-200" viewBox="0 0 24 24" fill="currentColor">
-                        <path fillRule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.58 0-.29-.01-1.05-.015-2.06-3.338.72-4.042-1.498-4.042-1.498-.546-1.386-1.333-1.756-1.333-1.756-1.088-.744.083-.728.083-.728 1.205.085 1.837 1.24 1.837 1.24 1.07 1.834 2.806 1.305 3.49.998.108-.77.417-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.307-.54-1.524.105-3.176 0 0 1.005-.322 3.3 1.23a11.553 11.553 0 013.016-.41c1.025.005 2.057.138 3.016.41 2.29-1.553 3.293-1.23 3.293-1.23.645 1.652.24 2.87.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.62-5.475 5.92.43.37.815 1.102.815 2.22 0 1.605-.015 2.896-.015 3.286 0 .32.215.69.825.57C20.565 21.79 24 17.29 24 12c0-6.63-5.37-12-12-12z" clipRule="evenodd" />
-                    </svg>
+                    <FaGithub className="h-10 w-10 text-gray-200" />
                 </a>
                 <nav className="hidden sm:flex items-center space-x-4">
                     <NavItem href="#About"><FiInfo className="inline-block h-6 w-6" /> About</NavItem>
@@ -23,7 +27,11 @@ const Header: React.FC = () => {
                     <NavItem href="#Certificates"><FiAward className="inline-block h-6 w-6" /> Certificates</NavItem>
                     <NavItem href="#Contact"><FiMail className="inline-block h-6 w-6" /> Contact</NavItem>
                 </nav>
-                <button className="sm:hidden text-gray-200 hover:text-gray-500 focus:text-gray-200" onClick={toggleMenu}>
+                <button
+                    className="sm:hidden text-gray-200 hover:text-gray-500 focus:text-gray-200"
+                    onClick={toggleMenu}
+                    aria-label="Toggle Menu"
+                >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         {isOpen ? (
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -32,7 +40,7 @@ const Header: React.FC = () => {
                         )}
                     </svg>
                 </button>
-            </div>
+            </motion.div>
             <AnimatePresence>
                 {isOpen && (
                     <motion.nav
