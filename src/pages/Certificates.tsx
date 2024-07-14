@@ -133,55 +133,55 @@ const Certificates: React.FC = () => {
   };
 
   return (
-    <div id="Certificates" className="flex flex-col items-center justify-center min-h-screen mt-12 rounded-lg bg-gray-900 hover:bg-opacity-70">
+    <div id="Certificates" className="flex flex-col items-center justify-center min-h-screen mt-12 rounded-lg bg-gradient-to-r from-blue-800 via-gray-800 to-gray-900 hover:bg-opacity-70">
       <main className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl pt-24 pb-8 text-center font-serif text-gray-200 underline hover:animate-pulse">Certificates</h1>
         <div className="flex justify-center flex-wrap mb-8 space-x-2 space-y-2">
           <button
             onClick={() => categorySelect(null)}
-            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === null ? 'bg-indigo-600' : 'bg-gray-800 hover:bg-indigo-600'}`}
+            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === null ? 'bg-blue-600' : 'bg-gray-800 hover:bg-blue-600'}`}
           >
             All
           </button>
           <button
             onClick={() => categorySelect('Design')}
-            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Design' ? 'bg-indigo-600' : 'bg-gray-800 hover:bg-indigo-600'}`}
+            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Design' ? 'bg-blue-600' : 'bg-gray-800 hover:bg-blue-600'}`}
           >
             Design
           </button>
           <button
             onClick={() => categorySelect('JavaScript')}
-            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'JavaScript' ? 'bg-indigo-600' : 'bg-gray-800 hover:bg-indigo-600'}`}
+            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'JavaScript' ? 'bg-blue-600' : 'bg-gray-800 hover:bg-blue-600'}`}
           >
             JavaScript
           </button>
           <button
             onClick={() => categorySelect('Front-End')}
-            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Front-End' ? 'bg-indigo-600' : 'bg-gray-800 hover:bg-indigo-600'}`}
+            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Front-End' ? 'bg-blue-600' : 'bg-gray-800 hover:bg-blue-600'}`}
           >
             Front-End
           </button>
           <button
             onClick={() => categorySelect('Python')}
-            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Python' ? 'bg-indigo-600' : 'bg-gray-800 hover:bg-indigo-600'}`}
+            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Python' ? 'bg-blue-600' : 'bg-gray-800 hover:bg-blue-600'}`}
           >
             Python
           </button>
           <button
             onClick={() => categorySelect('Databases')}
-            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Databases' ? 'bg-indigo-600' : 'bg-gray-800 hover:bg-indigo-600'}`}
+            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Databases' ? 'bg-blue-600' : 'bg-gray-800 hover:bg-blue-600'}`}
           >
             Databases
           </button>
           <button
             onClick={() => categorySelect('Scrum')}
-            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Scrum' ? 'bg-indigo-600' : 'bg-gray-800 hover:bg-indigo-600'}`}
+            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Scrum' ? 'bg-blue-600' : 'bg-gray-800 hover:bg-blue-600'}`}
           >
             Scrum
           </button>
           <button
             onClick={() => categorySelect('Cloud Computing')}
-            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Cloud Computing' ? 'bg-indigo-600' : 'bg-gray-800 hover:bg-indigo-600'}`}
+            className={`mx-2 px-4 py-2 rounded-lg text-gray-200 ${selectedCategory === 'Cloud Computing' ? 'bg-blue-600' : 'bg-gray-800 hover:bg-blue-600'}`}
           >
             Cloud Computing
           </button>
@@ -202,7 +202,7 @@ const Certificates: React.FC = () => {
                 transition={{ duration: 0.5 }}
                 onClick={() => openModal(certificate)}
               >
-                <div className="bg-gray-800 p-1 border-2 rounded-lg shadow-gray-900 shadow-lg overflow-hidden flex flex-col items-center">
+                <div className="bg-gray-800 p-1 border-2 rounded-lg shadow-gray-700 shadow-lg overflow-hidden flex flex-col items-center">
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -213,7 +213,7 @@ const Certificates: React.FC = () => {
                   <div className="p-4 flex flex-col items-center text-center">
                     <h2 className="text-xl font-semibold text-gray-200">{certificate.title}</h2>
                     <p className="mt-2 text-gray-200">{certificate.description}</p>
-                    <a href={certificate.link} target="_blank" rel="noopener noreferrer" className="text-indigo-600 text-2xl p-2 inline-block hover:animate-pulse">View Certificate</a>
+                    <a href={certificate.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 text-2xl p-2 inline-block hover:animate-pulse">View Certificate</a>
                   </div>
                 </div>
               </motion.div>
@@ -236,8 +236,8 @@ const Certificates: React.FC = () => {
                 <Image src={selectedCertificate.imageUrl} alt={selectedCertificate.title} width={200} height={100} />
                 <h2 className="text-2xl font-semibold text-gray-200 mt-4">{selectedCertificate.title}</h2>
                 <p className="text-gray-200">{selectedCertificate.description}</p>
-                <a href={selectedCertificate.link} target="_blank" rel="noopener noreferrer" className="text-indigo-600 text-lg mt-2 inline-block hover:animate-pulse">View Certificate</a>
-                <button onClick={closeModal} className="grid text-gray-100 hover:text-gray-600 mt-4 place-items-end rounded-lg px-2 bg-red-600">Close</button>
+                <a href={selectedCertificate.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 text-lg mt-2 inline-block hover:animate-pulse">View Certificate</a>
+                <button onClick={closeModal} className="grid text-gray-100 mt-4 place-items-end rounded-lg px-2 bg-red-600">Close</button>
               </motion.div>
             </motion.div>
           )}
