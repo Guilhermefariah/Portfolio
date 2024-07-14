@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     };
 
     return (
-        <header className="fixed z-50 bg-opacity-70 bg-black text-gray-200 p-4 text-2xl w-full">
+        <header className="fixed z-50 bg-opacity-70 bg-gradient-to-r from-blue-800 via-gray-800 to-gray-900 text-gray-200 p-4 text-2xl w-full">
             <motion.div
                 className="flex justify-between items-center"
                 initial={{ opacity: 0, y: -20 }}
