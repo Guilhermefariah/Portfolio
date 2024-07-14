@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 const ProfileCard = () => {
     return (
         <div id="About" className="flex flex-col items-center py-28">
-            <h1 className="text-4xl py-12 text-center font-serif text-text-gray-600 underline text-gray-200 hover:animate-pulse">Contact</h1>
-            <motion.div whileHover={{ scale: 1.1 }} className="flex flex-col items-center opacity-70 hover:opacity-100 max-w-xs sm:px-12 bg-gray-300 p-4 border-2 rounded-lg shadow-lg text-black mt-4">
+            <h1 className="text-4xl py-12 text-center font-serif text-text-gray-600 underline text-gray-400 hover:animate-pulse">Contact</h1>
+            <motion.div whileHover={{ scale: 1.1 }} className="flex flex-col items-center opacity-90 hover:opacity-100 max-w-xs sm:px-12 bg-gray-300 p-4 border-2 rounded-lg shadow-lg text-black mt-4">
                 <div className="relative w-32 h-32 rounded-full overflow-hidden">
                     <Image src="/img/Profile.jpg" alt="Guilherme Faria's profile" layout="fill" objectFit="cover" />
                 </div>
