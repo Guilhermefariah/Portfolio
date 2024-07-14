@@ -10,7 +10,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description }) => {
   return (
     <motion.div
       className="flex items-center justify-center h-screen w-full relative"
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 0.8 }}
       transition={{ duration: 0.5 }}
     >
       <div className="text-center w-full p-4 sm:w-3/4 lg:w-1/2">
