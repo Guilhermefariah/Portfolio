@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react'
+import { motion } from 'framer-motion'
 
 interface ProjectCardProps {
-  title: string;
-  description: string;
+  title: string
+  description: string
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description }) => {
@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description }) => {
         </motion.p>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default ProjectCard;
+export default ProjectCard

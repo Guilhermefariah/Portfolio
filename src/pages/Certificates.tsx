@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react'
+import Image from 'next/image'
+import { motion, AnimatePresence } from 'framer-motion'
 
 interface Certificate {
-  title: string;
-  description: string;
-  category: string;
-  imageUrl: string;
-  link: string;
+  title: string
+  description: string
+  category: string
+  imageUrl: string
+  link: string
 }
 
 const Certificates: React.FC = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [showModal, setShowModal] = useState<boolean>(false);
-  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [showModal, setShowModal] = useState<boolean>(false)
+  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null)
 
   const certificates: Certificate[] = [
     {
@@ -115,22 +115,22 @@ const Certificates: React.FC = () => {
       imageUrl: '/img/Python_Analytics.jpg',
       link: 'https://www.dio.me/certificate/GMJKAYYB/share',
     },
-  ];
+  ]
 
   const categorySelect = (category: string | null) => {
-    setSelectedCategory(category);
-    setHoveredIndex(null);
-  };
+    setSelectedCategory(category)
+    setHoveredIndex(null)
+  }
 
   const openModal = (certificate: Certificate) => {
-    setSelectedCertificate(certificate);
-    setShowModal(true);
-  };
+    setSelectedCertificate(certificate)
+    setShowModal(true)
+  }
 
   const closeModal = () => {
-    setShowModal(false);
-    setSelectedCertificate(null);
-  };
+    setShowModal(false)
+    setSelectedCertificate(null)
+  }
 
   return (
     <div id="Certificates" className="flex flex-col items-center justify-center min-h-screen mt-12 rounded-lg bg-gradient-to-r from-blue-800 via-gray-800 to-gray-900 hover:bg-opacity-70">
@@ -247,7 +247,7 @@ const Certificates: React.FC = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default Certificates;
+export default Certificates

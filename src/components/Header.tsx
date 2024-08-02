@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { FiInfo, FiAward, FiBox, FiMail } from 'react-icons/fi';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa';
+import React, { useState } from 'react'
+import { FiInfo, FiAward, FiBox, FiMail } from 'react-icons/fi'
+import { motion, AnimatePresence } from 'framer-motion'
+import { FaGithub } from 'react-icons/fa'
 
 const Header: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false)
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+        setIsOpen(!isOpen)
+    }
 
     return (
         <header className="fixed z-50 bg-opacity-70 bg-gradient-to-r from-blue-800 via-gray-800 to-gray-900 text-gray-200 p-4 text-2xl w-full">
@@ -60,12 +60,12 @@ const Header: React.FC = () => {
                 )}
             </AnimatePresence>
         </header>
-    );
-};
+    )
+}
 
 interface NavItemProps {
-    href: string;
-    children: React.ReactNode;
+    href: string
+    children: React.ReactNode
 }
 
 const NavItem: React.FC<NavItemProps> = ({ href, children }) => (
@@ -74,6 +74,6 @@ const NavItem: React.FC<NavItemProps> = ({ href, children }) => (
             {children}
         </a>
     </li>
-);
+)
 
-export default Header;
+export default Header

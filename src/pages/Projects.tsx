@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import { NextPage } from 'next';
+import React from 'react'
+import Image from 'next/image'
+import { NextPage } from 'next'
 
 const Projects: NextPage = () => {
   const projects = [
@@ -53,7 +53,7 @@ const Projects: NextPage = () => {
       imageUrl: '/img/ScreenShopping.jpeg',
       githubUrl: 'https://shopping-tan-nine.vercel.app/',
     },
-  ];
+  ]
 
   return (
     <div id="Projects" className="flex flex-col items-center justify-center min-h-screen py-12 rounded-lg bg-gradient-to-r from-blue-800 via-gray-800 to-gray-900 hover:bg-opacity-70">
@@ -86,7 +86,7 @@ const Projects: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

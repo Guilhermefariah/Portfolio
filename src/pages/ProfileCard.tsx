@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import React from 'react'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const ProfileCard = () => {
     return (
@@ -39,7 +39,7 @@ const ProfileCard = () => {
                 </div>
             </motion.div>
         </div>
-    );
-};
+    )
+}
 
-export default ProfileCard;
+export default ProfileCard
