@@ -6,7 +6,7 @@ import { FaGithub } from 'react-icons/fa'
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false)
 
-    const toggleMenu = () => {
+    const useMenu = () => {
         setIsOpen(!isOpen)
     }
 
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
                 </nav>
                 <button
                     className="sm:hidden text-gray-200 hover:text-gray-500 focus:text-gray-200"
-                    onClick={toggleMenu}
+                    onClick={useMenu}
                     aria-label="Toggle Menu"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">

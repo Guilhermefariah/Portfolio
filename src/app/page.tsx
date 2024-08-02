@@ -22,7 +22,7 @@ const Home: NextPage = () => {
     })
   }
 
-  const handleScroll = () => {
+  const useScroll = () => {
     if (window.scrollY > 200) {
       setShowButton(true)
     } else {
@@ -31,8 +31,8 @@ const Home: NextPage = () => {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', useScroll)
+    return () => window.removeEventListener('scroll', useScroll)
   }, [])
 
   const backgroundColor = () => {
