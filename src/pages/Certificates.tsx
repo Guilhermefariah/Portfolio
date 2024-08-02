@@ -133,7 +133,7 @@ const Certificates: React.FC = () => {
   }
 
   return (
-    <div id="Certificates" className="flex flex-col items-center justify-center min-h-screen mt-12 rounded-lg bg-gradient-to-r from-blue-800 via-gray-800 to-gray-900 hover:bg-opacity-70">
+    <div id="Certificates" className="flex flex-col items-center justify-center min-h-screen mt-12 rounded-lg bg-gradient-to-r from-blue-200 via-green-200 to-blue-300 hover:bg-opacity-70">
       <main className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl pt-24 pb-8 text-center font-serif text-gray-200 underline hover:animate-pulse">Certificates</h1>
         <div className="flex justify-center flex-wrap mb-8 space-x-2 space-y-2">

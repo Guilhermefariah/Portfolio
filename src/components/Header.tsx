@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     }
 
     return (
-        <header className="fixed z-50 bg-opacity-70 bg-gradient-to-r from-blue-800 via-gray-800 to-gray-900 text-gray-200 p-4 text-2xl w-full">
+        <header className="fixed z-50 bg-opacity-70 bg-gradient-to-r from-blue-200 via-green-200 to-blue-300 text-gray-900 p-4 text-2xl w-full">
             <motion.div
                 className="flex justify-between items-center"
                 initial={{ opacity: 0, y: -20 }}
@@ -19,7 +19,7 @@ const Header: React.FC = () => {
                 transition={{ duration: 0.5 }}
             >
                 <a href="https://github.com/Guilhermefariah" target="_blank" rel="noopener noreferrer">
-                    <FaGithub className="h-10 w-10 text-gray-200" />
+                    <FaGithub className="h-10 w-10 text-gray-900 hover:text-white transition duration-300" />
                 </a>
                 <nav className="hidden sm:flex items-center space-x-4">
                     <NavItem href="#About"><FiInfo className="inline-block h-6 w-6" /> About</NavItem>
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
                     <NavItem href="#Contact"><FiMail className="inline-block h-6 w-6" /> Contact</NavItem>
                 </nav>
                 <button
-                    className="sm:hidden text-gray-200 hover:text-gray-500 focus:text-gray-200"
+                    className="sm:hidden text-gray-900 hover:text-white transition duration-300"
                     onClick={useMenu}
                     aria-label="Toggle Menu"
                 >
@@ -70,7 +70,7 @@ interface NavItemProps {
 
 const NavItem: React.FC<NavItemProps> = ({ href, children }) => (
     <li className="font-serif">
-        <a href={href} className="inline-block text-gray-200 hover:text-gray-500 hover:underline hover:animate-pulse">
+        <a href={href} className="inline-block text-gray-900 hover:text-white transition duration-300 hover:underline hover:animate-pulse">
             {children}
         </a>
     </li>
