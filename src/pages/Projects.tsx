@@ -1,6 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
 import { NextPage } from 'next'
+import ProjectCard from '@/components/ProjectCard'
 
 const Projects: NextPage = () => {
   const projects = [
@@ -68,23 +68,14 @@ const Projects: NextPage = () => {
         <h1 className="text-4xl pt-28 pb-8 text-center underline hover:animate-pulse font-serif text-gray-900">Projects</h1>
         <div className="mx-auto px-4 py-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <div key={project.id} className="bg-gray-800 p-1 border-2 rounded-lg shadow-gray-700 shadow-md transition-transform duration-300 transform hover:scale-105">
-                <div className="relative group">
-                  <Image src={project.imageUrl} alt={project.title} width={400} height={300} className="rounded-lg" />
-                  <div className="absolute inset-0 bg-black font-serif bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                    <div className="bg-white opacity-90 p-2 rounded-lg shadow-lg text-center max-w-xs sm:max-w-sm md:max-w-md">
-                      <h2 className="text-xl sm:text-2xl md:text-3xl font-serif">{project.title}</h2>
-                      <p className="text-sm sm:text-base md:text-lg text-black line-clamp-3">{project.description}</p>
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <button className="mt-4 bg-black text-gray-200 px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300">
-                          View on Deploy
-                        </button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {projects.map(project => (
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                imageUrl={project.imageUrl}
+                githubUrl={project.githubUrl}
+              />
             ))}
           </div>
         </div>
