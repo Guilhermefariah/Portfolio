@@ -1,12 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-interface ProjectCardProps {
+interface ProjectLogoProps {
   title: string
   description: string
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description }) => {
+const ProjectLogo: React.FC<ProjectLogoProps> = ({ title, description }) => {
   return (
     <motion.div
       className="flex items-center justify-center h-screen w-full relative"
@@ -23,7 +23,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description }) => {
           {title}
         </motion.h2>
         <motion.p
-          className="text-xl sm:text-2xl lg:text-3xl text-gray-400 font-serif"
+          className="text-xl sm:text-2xl lg:text-3xl text-gray-200 font-serif"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -35,4 +35,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description }) => {
   )
 }
 
-export default ProjectCard
+export default ProjectLogo

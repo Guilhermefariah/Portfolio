@@ -2,7 +2,7 @@
 import type { NextPage } from 'next'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer'
-import ProjectCard from '@/components/ProjectCard'
+import ProjectLogo from '@/components/ProjectLogo'
 import Projects from '@/pages/Projects'
 import ProfileCard from '@/pages/ProfileCard'
 import Certificates from '@/pages/Certificates'
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <Header />
       <main className="flex-auto w-full justify-center items-center">
         <section id="About" className={`w-full justify-center items-center bg-${bgColor}`}>
-          <ProjectCard title="Guilherme Faria" description="Software Developer" />
+          <ProjectLogo title="Guilherme Faria" description="Software Developer" />
         </section>
         <section id="Projects" className={`flex-1 flex justify-center items-center bg-${bgColor}`}>
           <Projects />

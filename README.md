@@ -28,7 +28,7 @@ portfolio/
 │   ├── components/    
 │   │   ├── Header.tsx       
 │   │   ├── Footer.tsx       
-│   │   ├── ProjectCard.tsx  
+│   │   ├── ProjectLogo.tsx  
 │   │   └── ...              
 │   │
 │   ├── pages/ 
