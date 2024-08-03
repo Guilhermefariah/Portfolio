@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     const toggleMenu = () => setIsOpen(prev => !prev)
 
     return (
-        <header className="fixed z-50 bg-opacity-70 bg-gradient-to-r from-blue-200 via-green-200 to-blue-300 text-gray-900 p-4 text-2xl w-full">
+        <header className="fixed z-50 bg-gradient-to-r from-blue-200 via-green-200 to-blue-300 text-gray-900 p-4 text-2xl w-full">
             <motion.div
                 className="flex justify-between items-center"
                 initial={{ opacity: 0, y: -20 }}

@@ -63,7 +63,7 @@ const Projects: NextPage = () => {
   ]
 
   return (
-    <div id="Projects" className="flex flex-col items-center justify-center min-h-screen py-12 rounded-lg bg-gradient-to-r from-blue-200 via-green-200 to-blue-300 hover:bg-opacity-70">
+    <div id="Projects" className="flex flex-col opacity-90 items-center justify-center min-h-screen py-12 rounded-lg bg-gradient-to-r from-blue-200 via-green-200 to-blue-300 hover:bg-opacity-70">
       <main className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl pt-28 pb-8 text-center underline hover:animate-pulse font-serif text-gray-900">Projects</h1>
         <div className="mx-auto px-4 py-12">

@@ -35,7 +35,7 @@ const CertificateCard: React.FC<CertificateCardProps> = ({
         transition={{ duration: 0.5 }}
         onClick={onClick}
     >
-        <div className="bg-gray-800 p-1 border-2 rounded-lg shadow-gray-700 shadow-lg overflow-hidden flex flex-col items-center">
+        <div className="bg-gray-800 p-2 border-none rounded-lg shadow-gray-600 shadow-lg overflow-hidden flex flex-col items-center">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

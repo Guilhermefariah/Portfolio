@@ -21,7 +21,7 @@ const Certificates: React.FC = () => {
   return (
     <div id="Certificates" className="flex flex-col items-center justify-center min-h-screen mt-12 rounded-lg bg-gradient-to-r from-blue-200 via-green-200 to-blue-300 hover:bg-opacity-70">
       <main className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl pt-24 pb-8 text-center font-serif text-gray-200 underline hover:animate-pulse">Certificates</h1>
+        <h1 className="text-4xl pt-24 pb-8 text-center font-serif text-gray-900 underline hover:animate-pulse">Certificates</h1>
         <CertificateFilters selectedCategory={selectedCategory} onSelectCategory={categorySelect} />
         <div className="flex flex-wrap justify-center">
           {certificates
@@ -42,7 +42,7 @@ const Certificates: React.FC = () => {
             <CertificateModal certificate={selectedCertificate} onClose={closeModal} />
           )}
         </AnimatePresence>
-        <div className="text-center m-8 font-bold text-xl font-serif text-gray-200">
+        <div className="text-center m-8 font-bold text-xl font-serif text-gray-900">
           Total Certificates: {certificates.length}
         </div>
       </main>
