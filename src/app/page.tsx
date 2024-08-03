@@ -1,43 +1,18 @@
 'use client'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import React, { useState, useEffect } from 'react'
-import { FaArrowUp, FaToggleOn, FaToggleOff } from 'react-icons/fa'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer'
 import ProjectCard from '@/components/ProjectCard'
 import Projects from '@/pages/Projects'
 import ProfileCard from '@/pages/ProfileCard'
 import Certificates from '@/pages/Certificates'
-
+import ScrollToTopButton from '@/Home/ScrollToTopButton'
+import BackgroundButton from '@/Home/BackgroundButton'
+import useBackgroundColor from '@/hooks/useBackgroundColor'
 
 const Home: NextPage = () => {
-  const [showButton, setShowButton] = useState(false)
-  const [bgColor, setBgColor] = useState<'black' | 'white'>('black')
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  }
-
-  const useScroll = () => {
-    if (window.scrollY > 200) {
-      setShowButton(true)
-    } else {
-      setShowButton(false)
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', useScroll)
-    return () => window.removeEventListener('scroll', useScroll)
-  }, [])
-
-  const backgroundColor = () => {
-    setBgColor(bgColor === 'black' ? 'white' : 'black')
-  }
+  const [bgColor, BackgroundColor] = useBackgroundColor()
 
   return (
     <div className={`flex flex-col min-h-screen bg-${bgColor}`}>
@@ -48,37 +23,20 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <div id="About" className={`flex-auto w-full justify-center items-center bg-${bgColor}`}>
-        <ProjectCard
-          title="Guilherme Faria"
-          description="Software Developer"
-        />
+        <ProjectCard title="Guilherme Faria" description="Software Developer" />
       </div>
       <div id="Projects" className={`flex-1 flex justify-center items-center bg-${bgColor}`}>
         <Projects />
       </div>
-
       <div id="Certificates" className={`flex-1 flex justify-center items-center bg-${bgColor}`}>
         <Certificates />
       </div>
-
       <div id="Contact" className={`flex-1 flex justify-center items-center bg-${bgColor}`}>
         <ProfileCard />
       </div>
       <Footer />
-      {showButton && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-200 via-green-200 to-blue-300 text-gray-900 font-bold p-4 rounded-full flex items-center justify-center"
-        >
-          <FaArrowUp className="animate-bounce" />
-        </button>
-      )}
-      <button
-        onClick={backgroundColor}
-        className="fixed bottom-8 left-8 bg-gradient-to-r from-blue-200 via-green-200 to-blue-300 text-gray-900 font-bold p-4 rounded-full flex items-center justify-center"
-      >
-        {bgColor === 'black' ? <FaToggleOn /> : <FaToggleOff />}
-      </button>
+      <ScrollToTopButton />
+      <BackgroundButton bgColor={bgColor} BackgroundColor={BackgroundColor} />
     </div>
   )
 }
