@@ -1,6 +1,6 @@
 import React from 'react'
 import { NextPage } from 'next'
-import ProjectCard from '@/components/ProjectCard'
+import ProjectCard from '@/components/ProjectCard/ProjectCard'
 
 const Projects: NextPage = () => {
   const projects = [
